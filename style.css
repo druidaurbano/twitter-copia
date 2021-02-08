@@ -1,0 +1,39 @@
+:root {
+    --segoeFont: "Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+
+    --black: #000000;
+    --white: #ffffff;
+}
+
+html {
+    background: var(--black);
+}
+
+.fullPage {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.sidebar {
+    width: 25vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+p {
+    color: var(--white);
+    text-align: center;
+}
+
+button {
+    background-color: var(--black);
+    color: #d9d9d9;
+    border: none;
+
+    padding: 0.25rem;
+
+    font-family: var(--segoeFont);
+    font-size: 19px;
+
+    display: block;     /*itens em bloco vertical*/
+}
