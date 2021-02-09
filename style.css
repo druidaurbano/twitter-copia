@@ -3,37 +3,96 @@
 
     --black: #000000;
     --white: #ffffff;
+    --blue-twitter: #1da1f2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-    background: var(--black);
+    background-color: var(--black); 
 }
 
-.fullPage {
+body {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 3fr;
 }
 
-.sidebar {
-    width: 25vw;
-    align-items: center;
-    justify-content: space-between;
-}
-
-p {
-    color: var(--white);
+header {
+    background-color: var(--black);
     text-align: center;
 }
 
-button {
-    background-color: var(--black);
-    color: #d9d9d9;
-    border: none;
+main {
+    color: var(--white);
+}
 
-    padding: 0.25rem;
+.sidebar {          /*sidebar que pega tudo desde o icon até embaixo no account*/
+    height: 100vh;
+    width: auto;
 
+
+    display: flex;
+    justify-content: center;
+}
+
+.icon {                 /*ícone do twitter em cima da sidebar*/
+    display: flex;
+    color: var(--white);
+    justify-content: center;
+    transform: 75%;
+}
+
+.options a div{
+    border-radius: 0.5rem;
+}
+
+.options a:hover{       /*quando passar o mouse por cima das options que vão de home até more*/
+    color: var(--blue-twitter);
+    text-decoration: underline;
+}
+
+a {                 /*âncoras de home a more*/
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    
     font-family: var(--segoeFont);
-    font-size: 19px;
+    font-size: 1.1875rem;
+    color: #d9d9d9;
 
-    display: block;     /*itens em bloco vertical*/
+    width: 100%;
+    
+    cursor: pointer;
+
+    padding: 0.4375rem 0;
+}
+
+.tweet {            /*div do botão azul tweet*/
+    width: 90%;
+    justify-content: center;
+
+    margin: 15px 0;
+
+    position: relative;
+
+    display: flex;
+}
+
+.tweet a{           /*âncora do botão azul tweet*/
+    color: var(--white);
+
+    border-radius: 9999px;  /*faz a borda ficar esticada e arredondada*/
+    border-width: 1px;  /
+    border-style: solid;
+
+    background-color: var(--blue-twitter);
+}
+
+p {
+    display: flex;
+    justify-content: center;
 }
