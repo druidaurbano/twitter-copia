@@ -23,14 +23,7 @@ body {
 
 header {
     background-color: var(--black);
-    text-align: center;
-}
 
-main {
-    color: var(--white);
-}
-
-.sidebar {          /*sidebar que pega tudo desde o icon até embaixo no account*/
     height: 100vh;
     width: auto;
 
@@ -39,25 +32,45 @@ main {
     justify-content: center;
 }
 
-.icon {                 /*ícone do twitter em cima da sidebar*/
-    display: flex;
-    color: var(--white);
+.menu {
+    padding: 0 10px;
+}
+
+.menu-up {
+    width: 275px;
+    align-items: center;
     justify-content: center;
-    transform: 75%;
+    font-weight: 700;
+}
+
+.head-home {
+    padding: 2px 0;
+}
+
+.head-home h1 a div{                 /*ícone do twitter em cima de options*/
+    display: flex;
+    justify-content: center;
+
+    width: 47px;
+    height: 30px;
 }
 
 .options a div{
-    border-radius: 0.5rem;
+    padding: 10px;
+
+    /*flex-direction: row;*/        /*talvez seja necessário no futuro*/
 }
 
 .options a:hover{       /*quando passar o mouse por cima das options que vão de home até more*/
     color: var(--blue-twitter);
-    text-decoration: underline;
+    background-color: rgba(29, 161, 242, 0.1);
+    
+    transition-duration: 0.2s;
 }
 
 a {                 /*âncoras de home a more*/
     display: flex;
-    justify-content: center;
+    
     text-decoration: none;
     
     font-family: var(--segoeFont);
@@ -71,7 +84,7 @@ a {                 /*âncoras de home a more*/
     padding: 0.4375rem 0;
 }
 
-.tweet {            /*div do botão azul tweet*/
+.tweet a{            /*div do botão azul tweet*/
     width: 90%;
     justify-content: center;
 
@@ -86,13 +99,27 @@ a {                 /*âncoras de home a more*/
     color: var(--white);
 
     border-radius: 9999px;  /*faz a borda ficar esticada e arredondada*/
-    border-width: 1px;  /
-    border-style: solid;
+    border-width: 1px;
+    border-style: none;
 
     background-color: var(--blue-twitter);
+}
+
+
+.account {
+    
 }
 
 p {
     display: flex;
     justify-content: center;
+
+    color: var(--white);
 }
+
+/* Main --------*/
+
+main {
+    color: var(--white);
+}
+
