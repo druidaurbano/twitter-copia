@@ -55,12 +55,6 @@ header {
     height: 30px;
 }
 
-.options a div{
-    padding: 10px;
-
-    /*flex-direction: row;*/        /*talvez seja necessário no futuro*/
-}
-
 .options a:hover{       /*quando passar o mouse por cima das options que vão de home até more*/
     color: var(--blue-twitter);
     background-color: rgba(29, 161, 242, 0.1);
@@ -78,11 +72,28 @@ a {                 /*âncoras de home a more*/
     color: #d9d9d9;
 
     width: 100%;
+    height: auto;
     
     cursor: pointer;
 
     padding: 0.4375rem 0;
 }
+
+.option-item{
+    padding: 10px;
+    display: flex;
+    /*flex-direction: row;        /*talvez seja necessário no futuro*/
+}
+
+.option-item-word {             /*elemento do menu correspondednte à palavra*/
+    margin: 0 15px 0 20px;
+}
+
+.option-item-icon {     /*elemento ícone das opções*/
+    width: 30px;
+    height: 30px;
+}
+
 
 .tweet a{            /*div do botão azul tweet*/
     width: 90%;
