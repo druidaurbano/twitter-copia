@@ -108,7 +108,7 @@ header {
 
 /* Botão Azul tweet --------------*/
 
-.tweet a{            /*âncora do botão azul tweet*/
+.tweet a {            /*âncora do botão azul tweet*/
     width: 90%;
     height: 100%;
     justify-content: center;
@@ -189,7 +189,8 @@ header {
     width: 18.75px;
     height: 18.75px;
 }
-/* Main --------*/
+
+/* Main ---------------*/
 
 main {
     color: var(--white);
@@ -254,6 +255,118 @@ main {
     height: 22.5px;
 }
 
+.tweet-container {
+    width: 100%;
+    height: 112px;
+    display: flex;
+    
+    flex-direction: row;
+
+    padding: 5px 15px;
+}
+
+.tweet-container-photo {
+    padding-top: 5px;
+    margin-right: 10px;
+}
+
+.tweet-container-text {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 5px;
+}
+
+.twitter-writing {
+    display: flex;    
+    border: 2px;    
+}
+
+.twitter-writing div {
+    padding: 10px 0;
+}
+
+#tweet-input {
+    border: none;
+    
+    width: 504px;
+    height: 24px;
+
+    background-color: var(--black);
+
+    font-size: 19px;
+    font-weight: 400;
+    font-family: var(--segoeFont);
+}
+
+.twitter-writing-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 2px;
+
+    width: 100%;
+    height: 100%;
+}
+
+.options-tweet {
+    display: flex;
+    flex-direction: row;
+}
+
+.options-tweet div {
+    width: 37px;
+    height: 37px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.options-tweet-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.tweet-for-real a{
+    width: 75px;
+    height: 100%;
+    justify-content: center;
+
+    font-family: var(--segoeFont);
+    font-weight: 400;
+
+    display: flex;
+
+    padding: 10px;
+
+    color: var(--white);
+
+    border-radius: 9999px;  /*faz a borda ficar esticada e arredondada*/
+    border-width: 1px;
+    border-style: none;
+    text-decoration: none;
+    background-color: var(--blue-twitter);
+}
+
+.tweet-for-real a:hover {
+    color: var(--blue-twitter);
+    background-color: var(--white);
+}
+
+
+.blank-space {
+    height: 10px;
+
+    border: 1px 0;
+    border-style: solid none;
+    border-color: var(--gray-border);
+    background-color: rgb(21, 24, 28);
+}
+
+/* Happening ------------------*/
 .happening {
     width: 350px;
 }
