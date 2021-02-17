@@ -22,6 +22,7 @@ body {
     grid-template-columns: 1fr 3fr;
 }
 
+/* Header -----------------*/
 header {
     background-color: var(--black);
 
@@ -74,7 +75,9 @@ header {
     color: #d9d9d9;
 
     width: 100%;
-    height: 60.25px;    
+    height: 60.25px;
+    
+    
 
     /*padding: 0.4375rem 0;*/
 }
@@ -83,7 +86,8 @@ header {
     color: var(--blue-twitter);
     /*box-shadow: 0 1px 2px rgba(f,f,f,0.1);*/
     background-color: rgba(29, 161, 242, 0.1);
-
+    
+    
     /*width: fit-content;*/
     border-radius: 9999px;    
     
@@ -364,6 +368,24 @@ main {
     border-style: solid none;
     border-color: var(--gray-border);
     background-color: rgb(21, 24, 28);
+}
+
+/* Main/Timeline -----------------*/
+
+.timeline {
+    max-width: 600px;
+    
+    width: 100%;
+    height: 100vh;
+
+    font-size: 15px;
+
+    display: block;
+}
+
+.tweet-timeline {
+    border-bottom-width: 1px;
+    border-color: var(--gray-border);
 }
 
 /* Happening ------------------*/
