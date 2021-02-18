@@ -5,6 +5,9 @@
     --white: #ffffff;
     --blue-twitter: #1da1f2;
     --gray-border: rgb(47, 51, 54);
+    --dark-blue: rgba(29, 161, 242, 0.1);
+    --green-retweet: rgb(23, 191, 99);
+    --pink-favorite: rgb(224, 36, 94);
 }
 
 * {
@@ -85,7 +88,7 @@ header {
 .options a:hover {       /*quando passar o mouse por cima das options que vão de home até more*/
     color: var(--blue-twitter);
     /*box-shadow: 0 1px 2px rgba(f,f,f,0.1);*/
-    background-color: rgba(29, 161, 242, 0.1);
+    background-color: var(--dark-blue);
     
     
     /*width: fit-content;*/
@@ -364,7 +367,6 @@ main {
 .blank-space {
     height: 10px;
 
-    border: 1px 0;
     border-style: solid none;
     border-color: var(--gray-border);
     background-color: rgb(21, 24, 28);
@@ -384,8 +386,164 @@ main {
 }
 
 .tweet-timeline {
-    border-bottom-width: 1px;
+    border-width: 0 0 1px 0;
     border-color: var(--gray-border);
+    border-style: solid;
+
+    display: flex;
+    flex-direction: row;
+
+    padding: 10px 15px;
+}
+
+.tweet-photo {
+    margin-right: 10px;
+}
+
+.tweet-content {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.tweet-name-user {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: start;
+
+    width: 100%;
+
+    margin-bottom: 2px;
+
+    font-family: var(--segoeFont);
+    font-size: 15px;
+}
+
+.tweet-name-user div {
+    display: flex;
+    flex-direction: row;
+}
+
+.tweet-name-user div a {
+    text-decoration: none;
+    color: var(--white);
+    
+    font-weight: 700;    
+}
+
+.tweet-name-user div .user {
+    padding: 0 5px;
+    color: #6e767d;
+}
+
+svg.tweet-more{
+    width: 18.75px;
+    height: 18.75px;
+    fill: var(--white);
+}
+
+svg.tweet-more:hover {
+    fill:var(--blue-twitter);
+    cursor: pointer;
+
+    background-color: var(--dark-blue);
+    border-radius: 9999px;
+}
+
+.tweet-text {
+    font-family: var(--segoeFont);
+    font-size: 15px;
+    font-weight: 400;
+
+    color: rgba(217, 217, 217, 1.00);
+
+    position: relative;
+}
+
+.tweet-options-icons{
+    max-width: 425px;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    margin-top: 10px;
+}
+
+svg.icon-comment {
+    display: inline-block;
+    fill: var(--white);
+    height: 1.25em;
+    width: 1.25em;
+    max-width: 100%;
+    position: relative;
+    vertical-align: text-bottom;
+}
+
+svg.icon-comment:hover {
+    fill: var(--blue-twitter);
+    cursor: pointer;
+
+    background-color: rgba(29, 161, 242, 0.1);
+    border-radius: 9999px;
+}
+
+svg.icon-retweet {
+    display: inline-block;
+    fill: var(--white);
+    height: 1.25em;
+    width: 1.25em;
+    max-width: 100%;
+    position: relative;
+    vertical-align: text-bottom;
+}
+
+svg.icon-retweet:hover {
+    fill: var(--green-retweet);
+    cursor: pointer;
+
+    background-color: rgba(23, 191, 99, 0.1);
+    border-radius: 9999px;
+}
+
+svg.icon-favorite {
+    display: inline-block;
+    fill: var(--white);
+    height: 1.25em;
+    width: 1.25em;
+    max-width: 100%;
+    position: relative;
+    vertical-align: text-bottom;
+}
+
+svg.icon-favorite:hover {
+    fill: var(--pink-favorite);
+    cursor: pointer;
+
+    background-color: rgba(224, 36, 94, 0.1);
+    border-radius: 9999px;
+}
+
+svg.icon-share {
+    display: inline-block;
+    fill: var(--white);
+    height: 1.25em;
+    width: 1.25em;
+    max-width: 100%;
+    position: relative;
+    vertical-align: text-bottom;
+}
+
+svg.icon-share:hover {
+    fill: var(--blue-twitter);
+    cursor: pointer;
+
+    background-color: rgba(29, 161, 242, 0.1);
+    border-radius: 9999px;
 }
 
 /* Happening ------------------*/
