@@ -549,4 +549,116 @@ svg.icon-share:hover {
 /* Happening ------------------*/
 .happening {
     width: 350px;
+    height: 100%;
+    min-height: 1090px;
+
+    margin-right: 10px;
+
+    padding-top: 10px;
+    padding-bottom: 59px;
+
+    display: block;
 }
+
+.search {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 53px;
+    min-height: 30px;
+
+    display: flex;
+    flex-direction: row;
+
+    box-sizing: border-box;
+
+    align-items: center;
+
+    background-color: rgb(32, 35, 39);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0);
+    border-radius: 9999px;
+    border-style: solid;
+
+    
+}
+
+.icon-search {
+    display: flex;
+    justify-content: center;
+}
+
+.icon-search svg {
+    padding-left: 10px;
+    color: rgb(110, 118, 125);
+
+    height: 1.25em;
+    min-width: 30px;
+
+    fill: rgb(110, 118, 125);
+}
+
+.search-twitter {
+    font-weight: 400;
+    line-height: 1.3125;    
+}
+
+#search {
+    width: 100%;
+    display: flex;
+    text-align: left;
+    font-size: 15px;
+    font-family: var(--segoeFont);
+
+    box-sizing: border-box;
+    background: none;
+
+    border: none;
+
+    padding: 10px;
+    color: rgba(217, 217, 217, 1.00)
+}
+
+.whats-happening {
+    margin-bottom: 15px;
+    background-color: rgb(21, 24, 28);
+    border-color: rgb(21, 24, 28);
+    border-radius: 16px;
+    border-width: 1px;
+    border-style: solid;
+
+    width: 100%;
+    height: 547px;
+
+    display: grid;
+    grid-template-rows: 0.5fr 5fr 0.5fr;
+}
+
+.title-happening {
+    display: flex;
+    padding: 10px 15px;
+
+    font-family: var(--segoeFont);
+    font-weight: 400;
+}
+
+.whats-happening div {
+    background-color: rgb(21, 24, 28);
+    border-color: rgb(21, 24, 28);
+    border-radius: 16px;
+    border-width: 1px;
+    border-style: solid;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    
+}
+
+.teste {
+    display: flex;
+
+    color: yellowgreen;
+}
+
