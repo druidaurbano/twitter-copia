@@ -104,13 +104,17 @@ header {
     /*flex-direction: row;        /*talvez seja necessário no futuro*/
 }
 
-.option-item-word {             /*elemento do menu correspondednte à palavra*/
-    margin: 0 15px 0 20px;
+svg.option-item-icon {
+    display: inline-block;
+    fill: var(--white);
+    height: 1.75em;
+    max-width: 100%;
+    position: relative;
+    vertical-align: text-bottom;
 }
 
-.option-item-icon {     /*elemento ícone das opções*/
-    width: 30px;
-    height: 30px;
+.option-item-word {             /*elemento do menu correspondednte à palavra*/
+    margin: 0 15px 0 20px;
 }
 
 /* Botão Azul tweet --------------*/
@@ -192,9 +196,13 @@ header {
     box-sizing: border-box;
 }
 
-.more-account div span img{     /*icon more*/
-    width: 18.75px;
-    height: 18.75px;
+svg.more-account-icon{     /*icon more*/
+    display: inline-block;
+    fill: var(--white);
+    height: 1.75em;
+    max-width: 100%;
+    position: relative;
+    vertical-align: text-bottom;
 }
 
 /* Main ---------------*/
@@ -257,9 +265,18 @@ main {
     text-decoration: none;
 }
 
-.stars {
-    width: 22.5px;
-    height: 22.5px;
+svg.stars {
+    display: inline-block;
+    fill: var(--white);
+    height: 1.75em;
+    max-width: 100%;
+    position: relative;
+    vertical-align: text-bottom;
+}
+
+.stars:hover {
+    fill: var(--blue-twitter);
+    cursor: pointer;
 }
 
 .tweet-container {
@@ -332,9 +349,13 @@ main {
     align-items: center;
 }
 
-.options-tweet-icon {
-    width: 18px;
-    height: 18px;
+svg.options-tweet-new-icon {
+    display: inline-block;
+    fill: var(--blue-twitter);
+    width: 1.5em;
+    height: 1.5em;
+    position: relative;
+    vertical-align: text-bottom;
 }
 
 .tweet-for-real a{
