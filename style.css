@@ -53,17 +53,26 @@ header {
 }
 
 .head-home {
-    padding: 4px 0;
-    
-    width: 100%;
+    padding: 2px 0;    
 }
 
-.head-home h1 a div{                 /*ícone do twitter em cima de options*/
+.head-home h1 a{                 /*ícone do twitter em cima de options*/
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    align-items: center;
 
-    width: 47px;
-    height: 30px;
+    width: 100%;
+    height: 60.25px;
+}
+
+svg.home-icon-twitter {
+    display: inline-block;
+    fill: var(--white);
+    height: 2rem;
+    width: 1.5em;
+    max-width: 100%;
+    position: relative;
+    vertical-align: text-bottom;
 }
 
 .options a {                 /*âncoras de home a more*/
@@ -107,7 +116,7 @@ header {
 svg.option-item-icon {
     display: inline-block;
     fill: var(--white);
-    height: 1.75em;
+    height: 1.75rem;
     max-width: 100%;
     position: relative;
     vertical-align: text-bottom;
@@ -640,7 +649,7 @@ svg.icon-share:hover {
     color: rgba(217, 217, 217, 1.00)
 }
 
-.whats-happening {
+.whats-happening-container {
     margin-bottom: 15px;
     background-color: rgb(21, 24, 28);
     border-color: rgb(21, 24, 28);
@@ -655,15 +664,22 @@ svg.icon-share:hover {
     grid-template-rows: 0.5fr 5fr 0.5fr;
 }
 
-.title-happening {
-    display: flex;
+.whats-happening-title {
+    display: block;
     padding: 10px 15px;
 
     font-family: var(--segoeFont);
-    font-weight: 400;
+    font-weight: 800;
+    font-size: 19px;
+    
+    line-height: 1.3125;
+
+    border-bottom: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--gray-border);
 }
 
-.whats-happening div {
+.body-happening {
     background-color: rgb(21, 24, 28);
     border-color: rgb(21, 24, 28);
     border-radius: 16px;
@@ -672,14 +688,211 @@ svg.icon-share:hover {
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-
-    
+    justify-content: space-between;    
 }
 
-.teste {
+.body-item {
     display: flex;
+    border-bottom: 1px;
 
-    color: yellowgreen;
+    flex-direction: column;
+
+    padding: 10px 15px;
+
+    border-bottom: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--gray-border);
 }
 
+.gray-title {
+    display: flex;
+    flex-direction: row;
+
+    font-size: 13px;
+    font-family: var(--segoeFont);
+    font-weight: 400;
+
+    color: #6e767d;
+
+    justify-content: space-between;
+}
+
+.gray-trending {
+    width: fit-content;
+    height: 100%;
+}
+
+svg.more-happening {
+    display: inline-block;
+    width: 1.25em;
+    fill: #6e767d;
+    height: 1.25em;
+    max-width: 100%;
+    position: relative;
+    vertical-align: text-bottom;
+}
+
+.white-title {
+    display: block;
+    padding: 2px 0 0;
+
+    font-family: var(--segoeFont);
+    font-weight: 700;
+    font-size: 15px;
+    
+    line-height: 1.3125;
+}
+
+.tweet-count {
+    margin-top: 5px;
+    font-size: 13px;
+    font-family: var(--segoeFont);
+    font-weight: 400;
+
+    color: rgb(110, 118, 125);
+}
+
+.show-more{
+    display: flex;
+    padding: 15px;
+
+    font-size: 15px;
+    font-family: var(--segoeFont);
+    font-weight: 400;
+}
+
+.show-more a {
+    text-decoration: none;
+
+    color: var(--blue-twitter);
+}
+
+/* Who to follow -------------------*/
+
+.who-to-follow-container {
+    margin-bottom: 15px;
+    background-color: rgb(21, 24, 28);
+    border-color: rgb(21, 24, 28);
+    border-radius: 16px;
+    border-width: 1px;
+    border-style: solid;
+
+    width: 100%;
+    height: 330px;
+    min-height: 15rem;
+
+    display: grid;
+    grid-template-rows: 0.5fr repeat(3, 1fr) 0.5fr;
+}
+
+.who-to-follow-title {
+    display: block;
+    padding: 10px 15px;
+
+    font-family: var(--segoeFont);
+    font-weight: 800;
+    font-size: 19px;
+    
+    line-height: 1.3125;
+
+    border-bottom: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--gray-border);
+}
+
+.account-item {
+    display: flex;
+    border-bottom: 1px;
+
+    flex-direction: row;
+    
+
+    padding: 10px 15px;
+
+    border-bottom: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--gray-border);
+
+    align-items: center;
+}
+
+.follow-profile-photo {
+    display: flex;
+    margin-right: 10px;
+}
+
+.name-button-container {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    justify-content: space-between;
+}
+
+.follow-account {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    font-family: var(--segoeFont);
+}
+
+.name-account-follow {
+    color: var(--white);
+    
+    font-size: 15px;
+    font-weight: 700;
+
+    display: flex;
+    flex-direction: row;
+}
+
+svg.verified-icon {
+    fill: var(--white);
+    display: inline-block;
+    width: 1.25em;
+    height: 1.25em;
+    max-width: 100%;
+    position: relative;
+    vertical-align: text-bottom;
+}
+
+.user-follow {
+    color: #6e767d;
+    
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.follow {
+    min-width: 79px;
+    margin-left: 10px;
+}
+
+.follow button {
+    width: 100%;
+    height: 100%;
+
+    background: none;
+    color: var(--blue-twitter);
+
+    font-family: var(--segoeFont);
+    font-size: 15px;
+    font-weight: 700;
+
+    justify-content: center;
+    text-align: center;
+
+    border-radius: 9999px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--blue-twitter);
+}
+
+.follow button:hover {
+    color: var(--white);
+    background: var(--blue-twitter);
+
+    cursor: pointer;
+}
