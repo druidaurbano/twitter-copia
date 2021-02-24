@@ -3,11 +3,18 @@
 
     --black: #000000;
     --white: #ffffff;
+
+    --color-option-item-svg: #ffffff;
+
+    --radius: 0;
+
     --blue-twitter: #1da1f2;
     --gray-border: rgb(47, 51, 54);
     --dark-blue: rgba(29, 161, 242, 0.1);
     --green-retweet: rgb(23, 191, 99);
+    --green-shadow: rgba(23, 191, 99, 0.1);
     --pink-favorite: rgb(224, 36, 94);
+    --pink-shadow: rgba(224, 36, 94, 0.1);
 }
 
 * {
@@ -54,6 +61,7 @@ header {
 
 .head-home {
     padding: 2px 0;    
+    max-width: 100%;
 }
 
 .head-home h1 a{                 /*ícone do twitter em cima de options*/
@@ -61,7 +69,7 @@ header {
     justify-content: start;
     align-items: center;
 
-    width: 100%;
+    min-width: 49px;
     height: 60.25px;
 }
 
@@ -75,6 +83,12 @@ svg.home-icon-twitter {
     vertical-align: text-bottom;
 }
 
+svg.home-icon-twitter:hover {
+    background-color: var(--dark-blue);
+    box-shadow: 0 0 0 10px var(--dark-blue); 
+    border-radius: 9999px;
+}
+
 .options a {                 /*âncoras de home a more*/
     display: flex;
     justify-content: start;
@@ -86,36 +100,41 @@ svg.home-icon-twitter {
     font-size: 1.1875rem;
     color: #d9d9d9;
 
-    width: 100%;
-    height: 60.25px;
-    
-    
+    padding: 7px 0;
 
+    width: 100%;
+    
+    flex-grow: 1;
+    
+    
     /*padding: 0.4375rem 0;*/
 }
 
 .options a:hover {       /*quando passar o mouse por cima das options que vão de home até more*/
     color: var(--blue-twitter);
-    /*box-shadow: 0 1px 2px rgba(f,f,f,0.1);*/
-    background-color: var(--dark-blue);
-    
-    
-    /*width: fit-content;*/
-    border-radius: 9999px;    
-    
+
     cursor: pointer;
     transition-duration: 0.2s;
+
+    --radius: 9999px;
+
+    --color-option-item-svg: var(--blue-twitter);
 }
 
 .option-item{
     padding: 10px;
     display: flex;
+
+    box-shadow: inset 0 0 var(--radius) var(--dark-blue); 
+    border-radius: 9999px;
+    
+    max-width: 100%;
     /*flex-direction: row;        /*talvez seja necessário no futuro*/
 }
 
 svg.option-item-icon {
     display: inline-block;
-    fill: var(--white);
+    fill: var(--color-option-item-svg);
     height: 1.75rem;
     max-width: 100%;
     position: relative;
@@ -347,6 +366,8 @@ svg.stars {
 .options-tweet {
     display: flex;
     flex-direction: row;
+
+    margin: 10px 0 0 -10px;
 }
 
 .options-tweet div {
@@ -367,6 +388,17 @@ svg.options-tweet-new-icon {
     vertical-align: text-bottom;
 }
 
+svg.options-tweet-new-icon:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0 10px var(--dark-blue); 
+    border-radius: 9999px;
+    fill: var(--white);
+}
+
+.tweet-for-real {
+    margin: 10px 0 0;
+}
+
 .tweet-for-real a{
     width: 75px;
     height: 100%;
@@ -377,7 +409,9 @@ svg.options-tweet-new-icon {
 
     display: flex;
 
-    padding: 10px;
+    padding: 10px 15px;
+
+    margin-left: 10px;
 
     color: var(--white);
 
@@ -517,8 +551,7 @@ svg.icon-comment {
 svg.icon-comment:hover {
     fill: var(--blue-twitter);
     cursor: pointer;
-
-    background-color: rgba(29, 161, 242, 0.1);
+    box-shadow: 0 0 0 10px var(--dark-blue); 
     border-radius: 9999px;
 }
 
@@ -536,7 +569,8 @@ svg.icon-retweet:hover {
     fill: var(--green-retweet);
     cursor: pointer;
 
-    background-color: rgba(23, 191, 99, 0.1);
+    
+    box-shadow: 0 0 0 10px rgba(23, 191, 99, 0.1);
     border-radius: 9999px;
 }
 
@@ -554,7 +588,7 @@ svg.icon-favorite:hover {
     fill: var(--pink-favorite);
     cursor: pointer;
 
-    background-color: rgba(224, 36, 94, 0.1);
+    box-shadow: 0 0 0 10px rgba(224, 36, 94, 0.1);
     border-radius: 9999px;
 }
 
@@ -572,7 +606,7 @@ svg.icon-share:hover {
     fill: var(--blue-twitter);
     cursor: pointer;
 
-    background-color: rgba(29, 161, 242, 0.1);
+    box-shadow: 0 0 0 10px rgba(29, 161, 242, 0.1);
     border-radius: 9999px;
 }
 
@@ -895,4 +929,10 @@ svg.verified-icon {
     background: var(--blue-twitter);
 
     cursor: pointer;
+}
+
+/* Image properties --------*/
+
+.rounded-edge {
+    border-radius: 9999px;
 }
