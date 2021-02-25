@@ -10,6 +10,7 @@
 
     --blue-twitter: #1da1f2;
     --gray-border: rgb(47, 51, 54);
+    --gray-item: rgb(110, 118, 125);
     --dark-blue: rgba(29, 161, 242, 0.1);
     --green-retweet: rgb(23, 191, 99);
     --green-shadow: rgba(23, 191, 99, 0.1);
@@ -105,8 +106,6 @@ svg.home-icon-twitter:hover {
     width: 100%;
     
     flex-grow: 1;
-    
-    
     /*padding: 0.4375rem 0;*/
 }
 
@@ -278,6 +277,9 @@ main {
     border-bottom-style: solid;
     
     position: sticky;   /*faz com que ao rolar a tela o item fique posicionado na tela sempre aparecendo*/
+    z-index: 1;
+
+    background-color: var(--black);
 
     box-sizing: border-box;
 
@@ -644,7 +646,8 @@ svg.icon-share:hover {
     border-radius: 9999px;
     border-style: solid;
 
-    
+    /*position: sticky;*/
+    z-index: 1;   
 }
 
 .icon-search {
@@ -935,4 +938,49 @@ svg.verified-icon {
 
 .rounded-edge {
     border-radius: 9999px;
+}
+
+/* Overlay Options Tweet---------------*/
+
+.options-tweet-overlay {
+    color: white;
+
+    position: absolute;
+    right: 35vw;
+    top: 19vh;
+
+    background-color: var(--black);
+    
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--gray-border);
+    border-radius: 4px;
+    
+    opacity: 0;
+    visibility: hidden;
+}
+
+.options-tweet-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.options-tweet-overlay div {
+    display: flex;
+    padding: 16px;
+    flex-direction: row;
+}
+
+.options-tweet-overlay svg {
+    fill: var(--gray-item);
+    margin-right: 12px;
+    height: 1.25em;
+}
+
+.options-tweet-overlay span {
+    line-height: 1.3125;
+
+    font-family: var(--segoeFont);
+    font-weight: 400;
+    font-size: 15px;
 }
