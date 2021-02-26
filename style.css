@@ -934,6 +934,34 @@ svg.verified-icon {
     cursor: pointer;
 }
 
+/* Footer ---------------------*/
+footer {
+    padding: 0 16px;
+    margin-bottom: 16px;
+
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+footer a,
+footer span {
+    text-decoration: none;
+
+    color: var(--gray-item);
+
+    font-size: 13px;
+    font-family: var(--segoeFont);
+
+    padding-right: 12px;
+    margin: 2px 0;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
 /* Image properties --------*/
 
 .rounded-edge {
