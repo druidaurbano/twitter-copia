@@ -451,7 +451,7 @@ svg.options-tweet-new-icon:hover {
     display: block;
 }
 
-.tweet-timeline {
+.timeline div.tweet-timeline {
     border-width: 0 0 1px 0;
     border-color: var(--gray-border);
     border-style: solid;
