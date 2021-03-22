@@ -1012,3 +1012,11 @@ footer a:hover {
     font-weight: 400;
     font-size: 15px;
 }
+
+/* Retweet Overlay ------------*/
+.retweet-overlay {
+    opacity: 0;
+    visibility: hidden;
+
+    z-index: 999;
+}
